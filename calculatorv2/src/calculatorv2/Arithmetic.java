@@ -136,11 +136,11 @@ public class Arithmetic
 		check check1 = new check();
 		check1.checkDouble(param1, param2);
 		
-		if( check1.firstDoubleNumber<0 || check1.secondDoubleNumber<0 )
+		/*if( check1.firstDoubleNumber<0 || check1.secondDoubleNumber<0 )
 		{
 			logger.info("Value can not be less than 0");
 			throw new NumberFormatException("Value can not be less than 0");
-		}
+		}*/
 		return check1.firstDoubleNumber*check1.secondDoubleNumber;
 	}
 	
