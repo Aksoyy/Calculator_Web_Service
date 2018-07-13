@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e0fec3b7-694d-4f24-980c-a3d3a789281b" activeEnvironment="Default" name="Arithmetic" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7aef5e51-2faa-42ac-9b1c-86bc35127b6e" wsaVersion="NONE" name="ArithmeticSoapBinding" type="wsdl" bindingName="{http://calculatorv2}ArithmeticSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/calculatorv2/services/Arithmetic?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/calculatorv2/services/Arithmetic?wsdl"><con:part><con:url>http://localhost:8080/calculatorv2/services/Arithmetic?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://calculatorv2" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://calculatorv2" xmlns:intf="http://calculatorv2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://calculatorv2" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="mode">
+        <complexType>
+          <sequence>
+            <element name="param1" type="xsd:string"/>
+            <element name="param2" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="modeResponse">
+        <complexType>
+          <sequence>
+            <element name="modeReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getUpper">
+        <complexType>
+          <sequence>
+            <element name="param1" type="xsd:string"/>
+            <element name="param2" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getUpperResponse">
+        <complexType>
+          <sequence>
+            <element name="getUpperReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="addition">
+        <complexType>
+          <sequence>
+            <element name="param1" type="xsd:string"/>
+            <element name="param2" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="additionResponse">
+        <complexType>
+          <sequence>
+            <element name="additionReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fakto">
+        <complexType>
+          <sequence>
+            <element name="param1" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="faktoResponse">
+        <complexType>
+          <sequence>
+            <element name="faktoReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="multiplication">
+        <complexType>
+          <sequence>
+            <element name="param1" type="xsd:string"/>
+            <element name="param2" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="multiplicationResponse">
+        <complexType>
+          <sequence>
+            <element name="multiplicationReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="subtraction">
+        <complexType>
+          <sequence>
+            <element name="param1" type="xsd:string"/>
+            <element name="param2" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="subtractionResponse">
+        <complexType>
+          <sequence>
+            <element name="subtractionReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="division">
+        <complexType>
+          <sequence>
+            <element name="param1" type="xsd:string"/>
+            <element name="param2" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="divisionResponse">
+        <complexType>
+          <sequence>
+            <element name="divisionReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="modeRequest">
+    <wsdl:part element="impl:mode" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="divisionRequest">
+    <wsdl:part element="impl:division" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="additionRequest">
+    <wsdl:part element="impl:addition" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="faktoResponse">
+    <wsdl:part element="impl:faktoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="divisionResponse">
+    <wsdl:part element="impl:divisionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplicationResponse">
+    <wsdl:part element="impl:multiplicationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subtractionResponse">
+    <wsdl:part element="impl:subtractionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modeResponse">
+    <wsdl:part element="impl:modeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="faktoRequest">
+    <wsdl:part element="impl:fakto" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subtractionRequest">
+    <wsdl:part element="impl:subtraction" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="additionResponse">
+    <wsdl:part element="impl:additionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplicationRequest">
+    <wsdl:part element="impl:multiplication" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUpperResponse">
+    <wsdl:part element="impl:getUpperResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUpperRequest">
+    <wsdl:part element="impl:getUpper" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Arithmetic">
+    <wsdl:operation name="mode">
+      <wsdl:input message="impl:modeRequest" name="modeRequest"></wsdl:input>
+      <wsdl:output message="impl:modeResponse" name="modeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUpper">
+      <wsdl:input message="impl:getUpperRequest" name="getUpperRequest"></wsdl:input>
+      <wsdl:output message="impl:getUpperResponse" name="getUpperResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addition">
+      <wsdl:input message="impl:additionRequest" name="additionRequest"></wsdl:input>
+      <wsdl:output message="impl:additionResponse" name="additionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fakto">
+      <wsdl:input message="impl:faktoRequest" name="faktoRequest"></wsdl:input>
+      <wsdl:output message="impl:faktoResponse" name="faktoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplication">
+      <wsdl:input message="impl:multiplicationRequest" name="multiplicationRequest"></wsdl:input>
+      <wsdl:output message="impl:multiplicationResponse" name="multiplicationResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subtraction">
+      <wsdl:input message="impl:subtractionRequest" name="subtractionRequest"></wsdl:input>
+      <wsdl:output message="impl:subtractionResponse" name="subtractionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="division">
+      <wsdl:input message="impl:divisionRequest" name="divisionRequest"></wsdl:input>
+      <wsdl:output message="impl:divisionResponse" name="divisionResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ArithmeticSoapBinding" type="impl:Arithmetic">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="mode">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="modeRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="modeResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUpper">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getUpperRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUpperResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addition">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="additionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="additionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fakto">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="faktoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="faktoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="multiplicationRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="multiplicationResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subtraction">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="subtractionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="subtractionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="division">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="divisionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="divisionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ArithmeticService">
+    <wsdl:port binding="impl:ArithmeticSoapBinding" name="Arithmetic">
+      <wsdlsoap:address location="http://localhost:8080/calculatorv2/services/Arithmetic"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/calculatorv2/services/Arithmetic</con:endpoint></con:endpoints><con:operation id="57bed4af-decb-419a-b8c0-11f64a597740" isOneWay="false" action="" name="addition" bindingOperationName="addition" type="Request-Response" outputName="additionResponse" inputName="additionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="19c79b3b-b513-4ed3-8cc1-f172ea2dcb6f" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/calculatorv2/services/Arithmetic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://calculatorv2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:addition>\r
+         <cal:param1>5</cal:param1>\r
+         <cal:param2>5</cal:param2>\r
+      </cal:addition>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calculatorv2/Arithmetic/additionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="f8a185f0-4697-4e05-9749-9d4413d22527" isOneWay="false" action="" name="division" bindingOperationName="division" type="Request-Response" outputName="divisionResponse" inputName="divisionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fff6437a-efa3-4252-b676-b6a8d3e4d3be" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/calculatorv2/services/Arithmetic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://calculatorv2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:division>\r
+         <cal:param1>?</cal:param1>\r
+         <cal:param2>?</cal:param2>\r
+      </cal:division>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calculatorv2/Arithmetic/divisionRequest"/></con:call></con:operation><con:operation id="b85d2722-f7ac-4110-88d6-5d0560bc6770" isOneWay="false" action="" name="mode" bindingOperationName="mode" type="Request-Response" outputName="modeResponse" inputName="modeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f94d9ba3-6f85-4c40-b864-6b50a44f47d3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/calculatorv2/services/Arithmetic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://calculatorv2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:mode>\r
+         <cal:param1>?</cal:param1>\r
+         <cal:param2>?</cal:param2>\r
+      </cal:mode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calculatorv2/Arithmetic/modeRequest"/></con:call></con:operation><con:operation id="c53e55c1-156c-403c-8541-8a1929dc8ddd" isOneWay="false" action="" name="getUpper" bindingOperationName="getUpper" type="Request-Response" outputName="getUpperResponse" inputName="getUpperRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d0d024e5-18af-4382-ac32-9f36bf3d5779" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/calculatorv2/services/Arithmetic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://calculatorv2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:getUpper>\r
+         <cal:param1>?</cal:param1>\r
+         <cal:param2>?</cal:param2>\r
+      </cal:getUpper>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calculatorv2/Arithmetic/getUpperRequest"/></con:call></con:operation><con:operation id="1e36e2dc-e4a2-4bb3-8e26-c2ce30214adc" isOneWay="false" action="" name="fakto" bindingOperationName="fakto" type="Request-Response" outputName="faktoResponse" inputName="faktoRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="34e62455-f789-439e-8199-5497625ac8a6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/calculatorv2/services/Arithmetic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://calculatorv2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:fakto>\r
+         <cal:param1>?</cal:param1>\r
+      </cal:fakto>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calculatorv2/Arithmetic/faktoRequest"/></con:call></con:operation><con:operation id="ac64909f-91a8-47ef-bf09-1aa0d8fd5f47" isOneWay="false" action="" name="multiplication" bindingOperationName="multiplication" type="Request-Response" outputName="multiplicationResponse" inputName="multiplicationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="07662538-0d9f-4b6c-95e5-30c091722d4b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/calculatorv2/services/Arithmetic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://calculatorv2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:multiplication>\r
+         <cal:param1>?</cal:param1>\r
+         <cal:param2>?</cal:param2>\r
+      </cal:multiplication>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calculatorv2/Arithmetic/multiplicationRequest"/></con:call></con:operation><con:operation id="e4a4b1ae-1373-4b11-af4d-b7106e8f52da" isOneWay="false" action="" name="subtraction" bindingOperationName="subtraction" type="Request-Response" outputName="subtractionResponse" inputName="subtractionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="315ed634-a9eb-4e56-93e5-266ba9585bfe" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/calculatorv2/services/Arithmetic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://calculatorv2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:subtraction>\r
+         <cal:param1>?</cal:param1>\r
+         <cal:param2>?</cal:param2>\r
+      </cal:subtraction>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calculatorv2/Arithmetic/subtractionRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
